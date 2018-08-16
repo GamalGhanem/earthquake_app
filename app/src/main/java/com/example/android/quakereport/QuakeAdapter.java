@@ -42,7 +42,6 @@ public class QuakeAdapter extends ArrayAdapter<Quake> {
         DecimalFormat formatter = new DecimalFormat("0.0");
         String output = formatter.format(strength);
         strengthView.setText(output);
-        // Set the proper background color on the magnitude circle.
         // Fetch the background from the TextView, which is a GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) strengthView.getBackground();
         // Get the appropriate background color based on the current earthquake magnitude
@@ -97,14 +96,6 @@ public class QuakeAdapter extends ArrayAdapter<Quake> {
         return first;
     }
 
-     /*
-    returns the first part of the location from the full location
-     */
-     private String getSecondLocation(String fullLocation) {
-         int indx = fullLocation.indexOf("of");
-         String second = fullLocation.substring(indx + 2);
-         return second;
-     }
 
     /*
     returns the color value of the magnitude circle
@@ -136,6 +127,15 @@ public class QuakeAdapter extends ArrayAdapter<Quake> {
         }
         return res;
     }
+
+     /*
+    returns the first part of the location from the full location
+     */
+     private String getSecondLocation(String fullLocation) {
+         int indx = fullLocation.indexOf("of");
+         String second = fullLocation.substring(indx + 2);
+         return second;
+     }
 
 
 }
