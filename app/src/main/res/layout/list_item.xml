@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        tools:text="8.9"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/magnitude_circle"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+        android:id="@+id/strengthView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/strengthView"
+        android:text="Abdelhamid"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:textSize="12sp"
+        android:id="@+id/firstLocationView"
+        android:gravity="center"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abdelhamid"
+        android:textColor="@color/textColorEarthquakeLocation"
+        android:textSize="16sp"
+        android:layout_below="@id/firstLocationView"
+        android:layout_toRightOf="@id/strengthView"
+        android:paddingLeft="16dp"
+        android:id="@+id/secondLocationView"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghanem"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/dateView"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghanem"
+        android:textSize="12sp"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dateView"
+        android:id="@+id/timeView"
+        android:gravity="center"/>
+
+</RelativeLayout>
